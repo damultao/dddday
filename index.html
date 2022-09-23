@@ -1,0 +1,47 @@
+<html>
+<head>
+
+
+<!-- D-Day 스크립트 -->
+<script>
+    function ddaying() {
+        var today = new Date();
+        var dday = new Date("2023-01-07");
+        var toGo = dday.getTime() - today.getTime();
+        var daysGone = Math.abs(Math.floor(toGo / (1000 * 60 * 60 * 24)));
+        document.write(daysGone);
+    }
+
+    function ddayCount() {
+        var today = new Date();
+        var dday = new Date("2023-01-07");
+        var theDay = Math.floor((dday.getTime() - today.getTime()) / 86400000) + 1;
+        if (theDay <= 0) {
+            $("#dDay>.dday2").remove();
+            $("#dDay").append('<li><span style="margin-left: 5px;">D-Day!</span></li>');
+        } else {
+            document.write(theDay)
+        }
+    }
+
+</script>
+
+
+</head>
+
+<body>
+
+
+<div class="rgy-dday" style="position: absolute; left: 200px; top: 200px;">
+    <ul id="dDay">
+            <span class="ddayColor" style="font-size:400px; color:red;">
+                <script>
+                    ddayCount();
+                </script>
+            </span>
+    </ul>
+</div>
+
+</body>
+
+</html>
