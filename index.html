@@ -14,7 +14,7 @@
     function ddayCount() {
         var today = new Date();
         var dday = new Date("2023-01-10");
-        var theDay = Math.floor((dday.getTime() - today.getTime() + 32400000) / 86400000) + 1;
+        var theDay = Math.floor((dday.getTime() - today.getTime() - 32400000) / 86400000) + 1;
         if (theDay <= 0) {
             $("#dDay>.dday2").remove();
             $("#dDay").append('<li><span style="margin-left: 5px;">D-Day!</span></li>');
