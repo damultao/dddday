@@ -5,7 +5,7 @@
 <script>
     function ddaying() {
         var today = new Date();
-        var dday = new Date("2023-09-27");
+        var dday = new Date("2023-09-28");
         var toGo = dday.getTime() - today.getTime();
         var daysGone = Math.abs(Math.floor(toGo / (1000 * 60 * 60 * 24)));
         document.write(daysGone);
@@ -13,7 +13,7 @@
 <!-- D-Day 계산 -->
     function ddayCount() {
         var today = new Date();
-        var dday = new Date("2023-09-27");
+        var dday = new Date("2023-09-28");
         var theDay = Math.floor((dday.getTime() - today.getTime() - 32400000) / 86400000) + 1;
         if (theDay <= 0) {
             $("#dDay>.dday2").remove();
@@ -26,7 +26,7 @@
 </script>
 </head>
 <body>
- <img src="wyveday.jpg">
+ <img src="day0928.jpg">
 <div class="rgy-dday" style="position: absolute; left: 916px; top: 291px;">
     <ul id="dDay">
             <span class="ddayColor" style="font-size:400px; color:rgb(255,132,0);">
